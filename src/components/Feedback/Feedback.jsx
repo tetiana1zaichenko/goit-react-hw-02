@@ -1,13 +1,13 @@
-// import s from "./Feedback.module.css";
-const Feedback = ({ good, neutral, bad, total }) => {
+import s from "./Feedback.module.css";
+const Feedback = ({ good, neutral, bad, total, positive }) => {
   return (
     <div>
-      <ul>
-        <li>Good:{good}</li>
-        <li>Neutral:{neutral}</li>
-        <li>Bad:{bad}</li>
-        <li>Total:{total}</li>
-        <li>Positive</li>
+      <ul className={s.list}>
+        <li className={s.item}>Good: {good}</li>
+        <li className={s.item}>Neutral: {neutral}</li>
+        <li className={s.item}>Bad: {bad}</li>
+        <li className={s.item}>Total: {total}</li>
+        <li className={s.item}>Positive: {positive}</li>
       </ul>
     </div>
   );

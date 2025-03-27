@@ -1,21 +1,31 @@
-// import s from "./Options.module.css";
+import s from "./Options.module.css";
 
-const Options = ({ onClick }) => {
+const Options = ({ onClick, total, onReset }) => {
   return (
     <div>
-      <ul>
+      <ul className={s.list}>
         <li>
-          <button onClick={() => onClick("good")}>Good</button>
+          <button className={s.item} onClick={() => onClick("good")}>
+            Good
+          </button>
         </li>
         <li>
-          <button onClick={() => onClick("neutral")}>Neutral</button>
+          <button className={s.item} onClick={() => onClick("neutral")}>
+            Neutral
+          </button>
         </li>
         <li>
-          <button onClick={() => onClick("bad")}>Bad</button>
+          <button className={s.item} onClick={() => onClick("bad")}>
+            Bad
+          </button>
         </li>
-        <li>
-          <button>Reset</button>
-        </li>
+        {total > 0 && (
+          <li>
+            <button className={s.item} onClick={onReset}>
+              Reset
+            </button>
+          </li>
+        )}
       </ul>
     </div>
   );
