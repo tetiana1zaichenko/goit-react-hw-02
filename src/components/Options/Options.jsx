@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import s from "./Options.module.css";
 
 const Options = ({ onClick, total, onReset }) => {
